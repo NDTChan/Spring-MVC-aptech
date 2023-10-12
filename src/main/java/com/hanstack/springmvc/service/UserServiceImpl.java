@@ -2,13 +2,14 @@ package com.hanstack.springmvc.service;
 
 import com.hanstack.springmvc.model.User;
 import com.hanstack.springmvc.repository.UserRepository;
+import com.hanstack.springmvc.service.Impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class UserService implements IUserService {
+public class UserServiceImpl implements UserService {
     @Autowired
     UserRepository userRepository;
 

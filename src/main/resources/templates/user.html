@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<table>
+  <th:block th:each="user : ${users}">
+    <tr>
+      <td th:text="${user.getUsername()}">...</td>
+      <td th:text="${user.getPassword()}">...</td>
+    </tr>
+  </th:block>
+</table>
 </body>
 </html>
