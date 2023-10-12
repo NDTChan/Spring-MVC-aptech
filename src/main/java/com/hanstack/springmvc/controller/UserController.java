@@ -1,5 +1,6 @@
 package com.hanstack.springmvc.controller;
 
+import com.hanstack.springmvc.model.User;
 import com.hanstack.springmvc.service.Impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,7 +22,8 @@ public class UserController {
 
     @PostMapping("/login")
     public String login(String username, String password, Model model) {
-        if (username.equals("phuc") && password.equals("123")) {
+        User user = iUserService.getUserByNameAndPassword(username, password);
+        if (user != null) {
             return "homeScreen";
         }
         return "errorScreen";
