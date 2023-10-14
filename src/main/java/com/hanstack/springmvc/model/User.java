@@ -1,18 +1,16 @@
 package com.hanstack.springmvc.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "user")
+@Table(name = "Users")
 public class User {
     @Id
-    @Column(name = "id")
+    @Column(name = "user_id")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
-    @Column(name = "name")
+    @Column(name = "username")
     private String username;
     @Column(name = "password")
     private String password;

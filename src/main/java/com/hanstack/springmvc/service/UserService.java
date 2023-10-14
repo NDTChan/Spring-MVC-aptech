@@ -1,4 +1,4 @@
-package com.hanstack.springmvc.service.Impl;
+package com.hanstack.springmvc.service;
 
 import com.hanstack.springmvc.model.User;
 

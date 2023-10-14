@@ -1,8 +1,8 @@
-package com.hanstack.springmvc.service;
+package com.hanstack.springmvc.service.Impl;
 
 import com.hanstack.springmvc.model.User;
 import com.hanstack.springmvc.repository.UserRepository;
-import com.hanstack.springmvc.service.Impl.UserService;
+import com.hanstack.springmvc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
