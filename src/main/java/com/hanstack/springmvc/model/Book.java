@@ -15,7 +15,7 @@ public class Book {
     @Column(name = "price")
     private float price;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
 

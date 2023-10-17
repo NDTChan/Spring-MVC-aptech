@@ -2,6 +2,8 @@ package com.hanstack.springmvc.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "Category")
 public class Category {
@@ -12,6 +14,17 @@ public class Category {
 
     @Column(name = "category_name")
     private String categoryName;
+
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    private List<Book> bookList;
+
+    public List<Book> getBookList() {
+        return bookList;
+    }
+
+    public void setBookList(List<Book> bookList) {
+        this.bookList = bookList;
+    }
 
     public int getId() {
         return id;

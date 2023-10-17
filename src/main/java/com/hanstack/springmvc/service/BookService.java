@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface BookService {
     List<Book> getListBook();
+
+    void delete(int id);
+
+    void save(int categoryId, String title, float price);
 }
